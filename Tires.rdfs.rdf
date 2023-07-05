@@ -1,0 +1,1822 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix vp: <https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts//>.
+
+vp:Tire a rdfs:Class;
+    rdfs:isDefinedBy <https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire>;
+    rdfs:label "Tire";
+    rdfs:comment "Tire ".
+
+rdfs:BrandTire a rdfs:Class;
+    rdfs:label "BrandTire";
+    rdfs:comment "All Brand Tire ";
+    rdfs:subClassOf vp:Tire .
+
+vp:PneumaticTire a rdfs:Class;
+    rdfs:isDefinedBy <https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire>;
+    rdfs:label "PneumaticTire";
+    rdfs:comment "A Pneumatic Tire ";
+    rdfs:subClassOf vp:Tire .
+
+rdfs:Brand a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Tire Brand";
+  rdfs:comment "Class representing the brand of a tire." .
+
+rdfs:Avon a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Avon";
+    rdfs:comment "Tires of brand Avon";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:Bridgestone a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Bridgestone";
+    rdfs:comment "Tires of brand Bridgestone";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:Continental a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Continental";
+    rdfs:comment "Tires of brand Continental";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:Cooper a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Cooper";
+    rdfs:comment "Tires of brand Cooper";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:Dunlop a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Dunlop";
+    rdfs:comment "Tires of brand Dunlop";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:Firestone a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Firestone";
+    rdfs:comment "Tires of brand Firestone";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:Goodyear a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Goodyear";
+    rdfs:comment "Tires of brand Goodyear";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:Hankook a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Hankook";
+    rdfs:comment "Tires of brand Hankook";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:Michelin a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Michelin";
+    rdfs:comment "Tires of brand Michelin";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:Pirelli a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Pirelli";
+    rdfs:comment "Tires of brand Pirelli";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:Uniroyal a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Uniroyal";
+    rdfs:comment "Tires of brand Uniroyal";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:Yokohama a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Yokohama";
+    rdfs:comment "Tires of brand Yokohama";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:BFGoodrich a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "BFGoodrich";
+    rdfs:comment "Tires of brand BFGoodrich";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:Crossleader a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Crossleader";
+    rdfs:comment "Tires of brand Crossleader";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:Fulda a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Fulda";
+    rdfs:comment "Tires of brand Fulda";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:Kelly a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Kelly";
+    rdfs:comment "Tires of brand Kelly";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:Kumho a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Kumho";
+    rdfs:comment "Tires of brand Kumho";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:Marshal a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Marshal";
+    rdfs:comment "Tires of brand Marshal";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:Nankang a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Nankang";
+    rdfs:comment "Tires of brand Nankang";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:Orium a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Orium";
+    rdfs:comment "Tires of brand Orium";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:Rotalla a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Rotalla";
+    rdfs:comment "Tires of brand Rotalla";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:Toyo a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Toyo";
+    rdfs:comment "Tires of brand Toyo";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:Vredestein a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Vredestein";
+    rdfs:comment "Tires of brand Vredestein";
+    rdfs:subClassOf rdfs:Brand .
+
+rdfs:Type a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Tire Type";
+  rdfs:comment "Class representing the type of a tire." .
+
+rdfs:Summer a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Summer";
+    rdfs:comment "Summer tyres have a dedicated rubber compound that delivers excellent grip and handling on both dry and wet roads in warmer conditions. They also have reduced rolling resistance and therefore provide greater fuel efficiency and generate less road noise.";
+    rdfs:subClassOf rdfs:Type .
+
+rdfs:Winter a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Winter";
+    rdfs:comment "Winter tyres provide outstanding grip on road surfaces covered with snow and ice, as well as wet roads in cold conditions.";
+    rdfs:subClassOf rdfs:Type .
+
+rdfs:All-season a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "All-season";
+    rdfs:comment "An all-season tyre combines characteristics of both summer and winter tyres, offering a hybrid solution with the benefits of both. For drivers, living in regions with mild winter conditions (temperatures rarely drop below freezing), all-season tyres can be an alternative. ";
+    rdfs:subClassOf rdfs:Type .
+
+rdfs:Run-flat a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Run-flat";
+    rdfs:comment "Run-flat tyres are one of the greatest inventions in the automotive industry since the advent of the pneumatic tyre or the transition from bias-ply to radial tyres. Why is it so revolutionary? In the event of a puncture, or a sudden drop in inflation pressure, a run-flat tyre will remain fully operational until the driver can make it safely home or to the nearest garage.";
+    rdfs:subClassOf rdfs:Type .
+
+rdfs:4x4 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "4x4 ";
+    rdfs:comment "4x4 tyres feature a more widely spaced tread design than conventional car tyres, chiefly a larger tread block and deeper tyre grooves. Standard tyres perform poorly on surfaces like muddy ground because the tread quickly fills with mud and the wheel begins to spin uselessly, digging the tyre deeper and deeper into a hole. By comparison, 4x4 tyres have better traction on tough terrains like mud, grass and snow without the tread area becoming clogged.";
+    rdfs:subClassOf rdfs:Type .
+
+rdfs:Pattern a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Tire Pattern";
+  rdfs:comment "Class representing the pattern or tread design of a tire." .
+
+rdfs:Directional a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Directional";
+    rdfs:comment "The most common type of pattern is symmetrical; it's suitable for passenger car tyres, but not for high-performance use. Tyres with this design have continuous ribs or independent tread blocks across the entire face of the tread, and both halves of the tyre feature the same pattern.";
+    rdfs:subClassOf rdfs:Pattern .
+
+rdfs:Symmetrical a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Symmetrical";
+    rdfs:comment "A tyre with a directional tread pattern is designed to roll forward in one direction only. It has lateral grooves that meet in the middle of the tyre tread, resembling the shape of an arrowhead. Its purpose is more than sporty aesthetic, however. The V-shaped grooves are more capable of resisting aquaplaning (hydroplaning) at high speeds by displacing water more efficiently through the tread pattern.";
+    rdfs:subClassOf rdfs:Pattern .
+
+rdfs:Asymmetric a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Asymmetric";
+    rdfs:comment "A tyre with an asymmetric pattern features two separate tread designs, one on the inner half and another on the outer half of the tyre. It looks unusual, but both halves serve a distinct purpose. The inner tyre tread is responsible for water displacement and protection against aquaplaning. The outer tyre tread has rigid tread blocks for higher lateral stiffness, which provides high grip when cornering and driving on dry surfaces, and quieter interior noise. ";
+    rdfs:subClassOf rdfs:Pattern .
+
+rdfs:SpeedIndex a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Tire Speed Index";
+  rdfs:comment "The speed index rating is also a relevant factor when choosing a tyre. The tyre’s speed capability must be at least equivalent to the top speed of the vehicle. Its speed rating indicates the maximum permissible speed (at full load) of a tyre, and whether it’s appropriate for your car." .
+
+rdfs:Q a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Q";
+    rdfs:comment "Speed up to 160km/h ";
+    rdfs:subClassOf rdfs:SpeedIndex .
+
+rdfs:R a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "R";
+    rdfs:comment "Speed up to 170km/h ";
+    rdfs:subClassOf rdfs:SpeedIndex .
+
+rdfs:S a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "S";
+    rdfs:comment "Speed up to 180km/h ";
+    rdfs:subClassOf rdfs:SpeedIndex .
+
+rdfs:T a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "T";
+    rdfs:comment "Speed up to 190km/h ";
+    rdfs:subClassOf rdfs:SpeedIndex .
+
+rdfs:H a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "H";
+    rdfs:comment "Speed up to 210km/h ";
+    rdfs:subClassOf rdfs:SpeedIndex .
+
+rdfs:V a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "V";
+    rdfs:comment "Speed up to 240km/h ";
+    rdfs:subClassOf rdfs:SpeedIndex .
+
+rdfs:W a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "W";
+    rdfs:comment "Speed up to 270km/h ";
+    rdfs:subClassOf rdfs:SpeedIndex .
+
+rdfs:Y a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Y";
+    rdfs:comment "Speed up to 300km/h ";
+    rdfs:subClassOf rdfs:SpeedIndex .
+
+rdfs:ZR a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "ZR";
+    rdfs:comment "Generally over 240km/h ";
+    rdfs:subClassOf rdfs:SpeedIndex .
+
+rdfs:LoadIndex a rdfs:Class;
+  rdfs:label "Tire Load Index";
+  rdfs:comment "The load index rating is the maximum capacity of a passenger car tyre, calculated from the maximum permissible axle load range between two tyres." .
+
+rdfs:LoadIndex65 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "65";
+  rdfs:comment "290 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex66 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "66";
+  rdfs:comment "300 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex67 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "67";
+  rdfs:comment "307 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex68 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "68";
+  rdfs:comment "315 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex69 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "69";
+  rdfs:comment "325 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex70 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "70";
+  rdfs:comment "335 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex71 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "71";
+  rdfs:comment "345 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex72 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "72";
+  rdfs:comment "355 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex73 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "73";
+  rdfs:comment "365 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex74 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "74";
+  rdfs:comment "375 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex75 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "75";
+  rdfs:comment "387 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex76 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "76";
+  rdfs:comment "400 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex77 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "77";
+  rdfs:comment "412 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex78 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "78";
+  rdfs:comment "425 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex79 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "79";
+  rdfs:comment "437 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex80 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "80";
+  rdfs:comment "450 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex81 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "81";
+  rdfs:comment "462 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex82 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "82";
+  rdfs:comment "475 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex83 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "83";
+  rdfs:comment "487 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex84 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "84";
+  rdfs:comment "500 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex85 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "85";
+  rdfs:comment "515 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex86 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "86";
+  rdfs:comment "530 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex87 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "87";
+  rdfs:comment "545 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex88 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "88";
+  rdfs:comment "560 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex89 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "89";
+  rdfs:comment "580 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex90 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "90";
+  rdfs:comment "600 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex91 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "91";
+  rdfs:comment "615 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex92 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "92";
+  rdfs:comment "630 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex93 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "93";
+  rdfs:comment "650 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex94 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "94";
+  rdfs:comment "670 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex95 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "95";
+  rdfs:comment "690 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex96 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "96";
+  rdfs:comment "710 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex97 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "97";
+  rdfs:comment "730 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex98 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "98";
+  rdfs:comment "750 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex99 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "99";
+  rdfs:comment "775 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+rdfs:LoadIndex100 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "100";
+  rdfs:comment "800 kg";
+  rdfs:subClassOf rdfs:LoadIndex .
+
+
+rdfs:Width a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Tire Width";
+  rdfs:comment "Measured in steps of 10 and ranges from 125 mm to 335mm." .
+
+rdfs:Width125 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Width 125";
+  rdfs:comment "125 mm";
+  rdfs:subClassOf rdfs:Width .
+
+rdfs:Width135 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Width 135";
+  rdfs:comment "135 mm";
+  rdfs:subClassOf rdfs:Width .
+
+rdfs:Width145 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Width 145";
+  rdfs:comment "145 mm";
+  rdfs:subClassOf rdfs:Width .
+
+rdfs:Width155 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Width 155";
+  rdfs:comment "155 mm";
+  rdfs:subClassOf rdfs:Width .
+
+rdfs:Width165 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Width 165";
+  rdfs:comment "165 mm";
+  rdfs:subClassOf rdfs:Width .
+
+rdfs:Width175 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Width 175";
+  rdfs:comment "175 mm";
+  rdfs:subClassOf rdfs:Width .
+
+rdfs:Width185 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Width 185";
+  rdfs:comment "185 mm";
+  rdfs:subClassOf rdfs:Width .
+
+rdfs:Width195 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Width 195";
+  rdfs:comment "195 mm";
+  rdfs:subClassOf rdfs:Width .
+
+rdfs:Width205 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Width 205";
+  rdfs:comment "205 mm";
+  rdfs:subClassOf rdfs:Width .
+
+rdfs:Width215 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Width 215";
+  rdfs:comment "215 mm";
+  rdfs:subClassOf rdfs:Width .
+
+rdfs:Width225 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Width 225";
+  rdfs:comment "225 mm";
+  rdfs:subClassOf rdfs:Width .
+
+rdfs:Width235 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Width 235";
+  rdfs:comment "235 mm";
+  rdfs:subClassOf rdfs:Width .
+
+rdfs:Width245 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Width 245";
+  rdfs:comment "245 mm";
+  rdfs:subClassOf rdfs:Width .
+
+rdfs:Width255 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Width 255";
+  rdfs:comment "255 mm";
+  rdfs:subClassOf rdfs:Width .
+
+rdfs:Width265 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Width 265";
+  rdfs:comment "265 mm";
+  rdfs:subClassOf rdfs:Width .
+
+rdfs:Width275 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Width 275";
+  rdfs:comment "275 mm";
+  rdfs:subClassOf rdfs:Width .
+
+rdfs:Width285 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Width 285";
+  rdfs:comment "285 mm";
+  rdfs:subClassOf rdfs:Width .
+
+rdfs:Width295 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Width 295";
+  rdfs:comment "295 mm";
+  rdfs:subClassOf rdfs:Width .
+
+rdfs:Width305 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Width 305";
+  rdfs:comment "305 mm";
+  rdfs:subClassOf rdfs:Width .
+
+rdfs:Width315 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Width 315";
+  rdfs:comment "315 mm";
+  rdfs:subClassOf rdfs:Width .
+
+rdfs:Width325 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Width 325";
+  rdfs:comment "325 mm";
+  rdfs:subClassOf rdfs:Width .
+
+rdfs:Width335 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Width 335";
+  rdfs:comment "335 mm";
+  rdfs:subClassOf rdfs:Width .
+
+rdfs:RimDiameter a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Rim Diameter";
+  rdfs:comment "Rim onto which the tire can be mounted." .
+
+rdfs:Diameter13 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Diameter 13";
+  rdfs:comment "13''";
+  rdfs:subClassOf rdfs:RimDiameter .
+
+rdfs:Diameter14 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Diameter 14";
+  rdfs:comment "14''";
+  rdfs:subClassOf rdfs:RimDiameter .
+
+rdfs:Diameter15 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Diameter 15";
+  rdfs:comment "15''";
+  rdfs:subClassOf rdfs:RimDiameter .
+
+rdfs:Diameter16 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Diameter 16";
+  rdfs:comment "16''";
+  rdfs:subClassOf rdfs:RimDiameter .
+
+rdfs:Diameter17 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Diameter 17";
+  rdfs:comment "17''";
+  rdfs:subClassOf rdfs:RimDiameter .
+
+rdfs:Diameter18 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Diameter 18";
+  rdfs:comment "18''";
+  rdfs:subClassOf rdfs:RimDiameter .
+
+rdfs:Diameter19 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Diameter 19";
+  rdfs:comment "19''";
+  rdfs:subClassOf rdfs:RimDiameter .
+
+rdfs:Diameter20 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Diameter 20";
+  rdfs:comment "20''";
+  rdfs:subClassOf rdfs:RimDiameter .
+
+rdfs:Diameter21 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Diameter 21";
+  rdfs:comment "21''";
+  rdfs:subClassOf rdfs:RimDiameter .
+
+rdfs:Diameter22 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Diameter 22";
+  rdfs:comment "22''";
+  rdfs:subClassOf rdfs:RimDiameter .
+
+rdfs:Diameter23 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Diameter 23";
+  rdfs:comment "23''";
+  rdfs:subClassOf rdfs:RimDiameter .
+
+rdfs:Diameter24 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Diameter 24";
+  rdfs:comment "24''";
+  rdfs:subClassOf rdfs:RimDiameter .
+
+rdfs:Diameter25 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Diameter 25";
+  rdfs:comment "25''";
+  rdfs:subClassOf rdfs:RimDiameter .
+
+rdfs:Diameter26 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Diameter 26";
+  rdfs:comment "26''";
+  rdfs:subClassOf rdfs:RimDiameter .
+
+rdfs:Diameter27 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Diameter 27";
+  rdfs:comment "27''";
+  rdfs:subClassOf rdfs:RimDiameter .
+
+rdfs:Diameter28 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Diameter 28";
+  rdfs:comment "28''";
+  rdfs:subClassOf rdfs:RimDiameter .
+
+rdfs:Diameter29 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Diameter 29";
+  rdfs:comment "29''";
+  rdfs:subClassOf rdfs:RimDiameter .
+
+rdfs:Diameter30 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Diameter 30";
+  rdfs:comment "30''";
+  rdfs:subClassOf rdfs:RimDiameter .
+
+rdfs:Construction a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Tyre Construction ";
+  rdfs:comment "Tyre Construction." .
+
+rdfs:Radial a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Radial";
+  rdfs:comment "Tires utilise a series of steel cords, extending from the beads and across the tread, so that the cords are laid at approximately right angles to the centre line of the tread, and parallel to each other, as well as belts directly beneath the tread. This network of cords gives the tyre strength and shape.";
+  rdfs:subClassOf rdfs:Construction .
+  
+rdfs:Bias a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Bias or Diagonal";
+  rdfs:comment "A Bias tyre is made of layers of rubber-coated, plies of fabric (commonly nylon) placed at angles of approximately 30-40 degrees, with successive plies laid at opposing angles forming a crisscross pattern to which the tread is applied. ";
+  rdfs:subClassOf rdfs:Construction .
+  
+rdfs:Solid a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Solid";
+  rdfs:comment "Solid tyres are non-pneumatic, meaning that they are not filled with air. These tyres are used for industrial applications and suitable for forklifts, heavy-duty transport vehicles, platform trucks and other industrial vehicles.";
+  rdfs:subClassOf rdfs:Construction .
+
+rdfs:Loudness a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Loudness";
+  rdfs:comment "Class representing loudness of tire." .
+
+rdfs:Noise67 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Noise 67";
+  rdfs:comment "Noise of 67 dB.";
+  rdfs:subClassOf rdfs:Loudness .
+
+rdfs:Noise68 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Noise 68";
+  rdfs:comment "Noise of 68 dB.";
+  rdfs:subClassOf rdfs:Loudness .
+
+rdfs:Noise69 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Noise 69";
+  rdfs:comment "Noise of 69 dB.";
+  rdfs:subClassOf rdfs:Loudness .
+
+rdfs:Noise70 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Noise 70";
+  rdfs:comment "Noise of 70 dB.";
+  rdfs:subClassOf rdfs:Loudness .
+
+rdfs:Noise71 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Noise 71";
+  rdfs:comment "Noise of 71 dB.";
+  rdfs:subClassOf rdfs:Loudness .
+
+rdfs:Noise72 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Noise 72";
+  rdfs:comment "Noise of 72 dB.";
+  rdfs:subClassOf rdfs:Loudness .
+
+rdfs:Noise73 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Noise 73";
+  rdfs:comment "Noise of 73 dB.";
+  rdfs:subClassOf rdfs:Loudness .
+
+rdfs:Noise74 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Noise 74";
+  rdfs:comment "Noise of 74 dB.";
+  rdfs:subClassOf rdfs:Loudness .
+
+rdfs:Noise75 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Noise 75";
+  rdfs:comment "Noise of 75 dB.";
+  rdfs:subClassOf rdfs:Loudness .
+
+rdfs:Noise76 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Noise 76";
+  rdfs:comment "Noise of 76 dB.";
+  rdfs:subClassOf rdfs:Loudness .
+
+rdfs:Noise77 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Noise 77";
+  rdfs:comment "Noise of 77 dB.";
+  rdfs:subClassOf rdfs:Loudness .
+
+rdfs:WetGrip a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Wet Grip";
+  rdfs:comment "s the tyre’s ability to stick to the road in wet conditions." .
+
+rdfs:GasConsumptionGrade a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Gas Consumption Grade";
+  rdfs:comment "Class representing the grade of tire gas consumption." .
+
+rdfs:GradeA a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Grade A";
+  rdfs:comment "bla bla bla.";
+  rdfs:subClassOf rdfs:GasConsumptionGrade, rdfs:WetGrip.
+
+rdfs:GradeB a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Grade B";
+  rdfs:comment "bla bla bla.";
+  rdfs:subClassOf rdfs:GasConsumptionGrade, rdfs:WetGrip.
+
+rdfs:GradeC a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Grade C";
+  rdfs:comment "bla bla bla.";
+  rdfs:subClassOf rdfs:GasConsumptionGrade, rdfs:WetGrip.
+
+rdfs:GradeD a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Grade D";
+  rdfs:comment "bla bla bla.";
+  rdfs:subClassOf rdfs:GasConsumptionGrade, rdfs:WetGrip.
+
+rdfs:GradeE a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Grade E";
+  rdfs:comment "bla bla bla.";
+  rdfs:subClassOf rdfs:GasConsumptionGrade, rdfs:WetGrip.
+
+rdfs:GradeF a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Grade F";
+  rdfs:comment "bla bla bla.";
+  rdfs:subClassOf rdfs:GasConsumptionGrade, rdfs:WetGrip.
+
+rdfs:GradeG a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Grade G";
+  rdfs:comment "bla bla bla.";
+  rdfs:subClassOf rdfs:GasConsumptionGrade, rdfs:WetGrip.
+
+
+# Properties
+
+rdfs:tireHasConstruction a rdfs:Property;
+  rdfs:label "tireHasConstruction";
+  rdfs:domain vp:Tire;
+  rdfs:range rdfs:Construction;
+  rdfs:comment "Specifies the type of Construction of tire." .
+
+rdfs:tireHasRim a rdfs:Property;
+  rdfs:label "tireHasRim";
+  rdfs:domain vp:Tire;
+  rdfs:range rdfs:RimDiameter;
+  rdfs:comment "Specifies the rim of the tire." .
+
+rdfs:tireHasWidth a rdfs:Property;
+  rdfs:label "tireHasWidth";
+  rdfs:domain vp:Tire;
+  rdfs:range rdfs:Width;
+  rdfs:comment "Specifies the width of the tire." .
+
+rdfs:tireHasBrand a rdfs:Property;
+  rdfs:label "tireHasBrand";
+  rdfs:domain vp:Tire;
+  rdfs:range rdfs:Brand;
+  rdfs:comment "Specifies the brand of the tire." .
+
+rdfs:tireHasType a rdfs:Property;
+  rdfs:label "tireHasType";
+  rdfs:domain vp:Tire;
+  rdfs:range rdfs:Type;
+  rdfs:comment "Specifies the type of the tire." .
+
+rdfs:tireHasLoadIndex a rdfs:Property;
+  rdfs:label "tireHasLoadIndex";
+  rdfs:domain vp:Tire;
+  rdfs:range rdfs:LoadIndex;
+  rdfs:comment "Specifies tire load index." .
+
+  rdfs:tireHasSpeedIndex a rdfs:Property;
+  rdfs:label "tireHasSpeedIndex";
+  rdfs:domain vp:Tire;
+  rdfs:range rdfs:SpeedIndex;
+  rdfs:comment "Specifies tire speed index." .
+
+rdfs:tireHasPattern a rdfs:Property;
+  rdfs:label "tireHasPattern";
+  rdfs:domain vp:Tire;
+  rdfs:range rdfs:Pattern;
+  rdfs:comment "Specifies the pattern of the tire." .
+
+rdfs:tireHasWetGrip a rdfs:Property;
+  rdfs:label "tireHasPerformance";
+  rdfs:domain vp:Tire;
+  rdfs:range rdfs:WetGrip;
+  rdfs:comment "Specifies the wet grip grade of the tire." .
+
+rdfs:tireHasLoudness a rdfs:Property;
+  rdfs:label "tireHasLoudness";
+  rdfs:domain vp:Tire;
+  rdfs:range rdfs:Loudness;
+  rdfs:comment "Specifies the loudness grade of the tire." .
+
+rdfs:tireHasGasConsumptionGrade a rdfs:Property;
+  rdfs:label "tireHasGasConsumptionGrade";
+  rdfs:domain vp:Tire;
+  rdfs:range rdfs:GasConsumptionGrade;
+  rdfs:comment "Specifies the gas consumption grade of the tire." .
+ 
+# Real Models
+
+rdfs:AS7 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Avon AS7";
+  rdfs:comment "Tire of Avon.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Avon;
+  rdfs:tireHasType rdfs:All-season;
+  rdfs:tireHasLoudness rdfs:Noise70;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeB;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeB.
+
+rdfs:AX7 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Avon AX7";
+  rdfs:comment "Tire of Avon.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Avon;
+  rdfs:tireHasType rdfs:All-season;
+  rdfs:tireHasLoudness rdfs:Noise70;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeB;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeB.
+
+rdfs:ZV7 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Avon ZV7";
+  rdfs:comment "Tire of Avon.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Avon;
+  rdfs:tireHasType rdfs:All-season;
+  rdfs:tireHasLoudness rdfs:Noise70;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex80;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeA;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeC.
+
+rdfs:AV12 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Avon AV12";
+  rdfs:comment "Tire of Avon.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Avon;
+  rdfs:tireHasType rdfs:All-season;
+  rdfs:tireHasLoudness rdfs:Noise75;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex98;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeD.
+
+rdfs:TURANZA6 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Bridgestone Tire TURANZA 6";
+    rdfs:comment "Tire of brand Bridgestone";
+    rdfs:subClassOf rdfs:BrandTire;
+    rdfs:tireHasBrand rdfs:Bridgestone;
+    rdfs:tireHasType rdfs:4x4;
+    rdfs:tireHasLoudness rdfs:Noise72;
+    rdfs:tireHasConstruction rdfs:Bias;
+    rdfs:tireHasRim rdfs:Diameter16;
+    rdfs:tireHasWidth rdfs:Width245;  
+    rdfs:tireHasLoadIndex rdfs:LoadIndex80;
+    rdfs:tireHasSpeedIndex rdfs:W;
+    rdfs:tireHasPattern rdfs:Asymmetric;
+    rdfs:tireHasWetGrip rdfs:GradeA;
+    rdfs:tireHasGasConsumptionGrade rdfs:GradeA.
+
+rdfs:TURANZA_T005 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Bridgestone Tire TURANZA_T005";
+    rdfs:comment "Tire of brand Bridgestone";
+    rdfs:subClassOf rdfs:BrandTire;
+    rdfs:tireHasBrand rdfs:Bridgestone;
+    rdfs:tireHasType rdfs:Summer;
+    rdfs:tireHasLoudness rdfs:Noise74;
+    rdfs:tireHasConstruction rdfs:Bias;
+    rdfs:tireHasRim rdfs:Diameter18;
+    rdfs:tireHasWidth rdfs:Width255;  
+    rdfs:tireHasLoadIndex rdfs:LoadIndex90;
+    rdfs:tireHasSpeedIndex rdfs:Y;
+    rdfs:tireHasPattern rdfs:Symmetrical;
+    rdfs:tireHasWetGrip rdfs:GradeC;
+    rdfs:tireHasGasConsumptionGrade rdfs:GradeB.
+
+rdfs:TURANZA_T005_DriveGuard a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Bridgestone Tire TURANZA_T005_DriveGuard";
+    rdfs:comment "Tire of brand Bridgestone";
+    rdfs:subClassOf rdfs:BrandTire;
+    rdfs:tireHasBrand rdfs:Bridgestone;
+    rdfs:tireHasType rdfs:Summer;
+    rdfs:tireHasLoudness rdfs:Noise74;
+    rdfs:tireHasConstruction rdfs:Bias;
+    rdfs:tireHasRim rdfs:Diameter18;
+    rdfs:tireHasWidth rdfs:Width255;  
+    rdfs:tireHasLoadIndex rdfs:LoadIndex90;
+    rdfs:tireHasSpeedIndex rdfs:Y;
+    rdfs:tireHasPattern rdfs:Symmetrical;
+    rdfs:tireHasWetGrip rdfs:GradeC;
+    rdfs:tireHasGasConsumptionGrade rdfs:GradeB.
+
+rdfs:TURANZA_ER300A a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+    rdfs:label "Bridgestone Tire TURANZA_ER300A";
+    rdfs:comment "Tire of brand Bridgestone";
+    rdfs:subClassOf rdfs:BrandTire;
+    rdfs:tireHasBrand rdfs:Bridgestone;
+    rdfs:tireHasType rdfs:Summer;
+    rdfs:tireHasLoudness rdfs:Noise73;
+    rdfs:tireHasConstruction rdfs:Bias;
+    rdfs:tireHasRim rdfs:Diameter17;
+    rdfs:tireHasWidth rdfs:Width245;  
+    rdfs:tireHasLoadIndex rdfs:LoadIndex90;
+    rdfs:tireHasSpeedIndex rdfs:Y;
+    rdfs:tireHasPattern rdfs:Symmetrical;
+    rdfs:tireHasWetGrip rdfs:GradeC;
+    rdfs:tireHasGasConsumptionGrade rdfs:GradeB.
+
+rdfs:ContiSportContact5 a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "ContiSportContact5";
+  rdfs:comment "Tire of.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Continental;
+  rdfs:tireHasType rdfs:Summer;
+  rdfs:tireHasLoudness rdfs:Noise70;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:Y;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeA;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeC.
+
+
+rdfs:ExtremeContactDWS06: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "ExtremeContact DWS06";
+  rdfs:comment "Tire of.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Continental;
+  rdfs:tireHasType rdfs:All-season;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Radial;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeA;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeC.
+
+
+rdfs:DiscovererA_T3: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "DiscovererA/T3";
+  rdfs:comment "Tire of.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Cooper;
+  rdfs:tireHasType rdfs:4x4;
+  rdfs:tireHasLoudness rdfs:Noise76;
+  rdfs:tireHasConstruction rdfs:Radial;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width255;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex99;
+  rdfs:tireHasSpeedIndex rdfs:Y;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+rdfs:EvolutionWinter: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Evolution Winter";
+  rdfs:comment "Tire of.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Cooper;
+  rdfs:tireHasType rdfs:Winter;
+  rdfs:tireHasLoudness rdfs:Noise72;
+  rdfs:tireHasConstruction rdfs:Radial;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex80;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Symmetrical;
+  rdfs:tireHasWetGrip rdfs:GradeE;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeF.
+
+rdfs:SPSportMaxxGT: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "SP Sport Maxx GT";
+  rdfs:comment "Tire of Dunlop.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Dunlop;
+  rdfs:tireHasType rdfs:All-season;
+  rdfs:tireHasLoudness rdfs:Noise76;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeB;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeC.
+
+rdfs:WinterSport5: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Winter Sport 5";
+  rdfs:comment "Tire of Dunlop.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Dunlop;
+  rdfs:tireHasType rdfs:Winter;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+rdfs:FirehawkIndy500: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Firehawk Indy 500";
+  rdfs:comment "Tire of Firestone.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Firestone;
+  rdfs:tireHasType rdfs:Summer;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Radial;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeB;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+  
+rdfs:DestinationLE3: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Destination LE3";
+  rdfs:comment "Tire of Firestone.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Firestone;
+  rdfs:tireHasType rdfs:All-season;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeA;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeC.
+  
+
+rdfs:EagleF1Asymmetric5: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Eagle F1 Asymmetric 5";
+  rdfs:comment "Tire of Goodyear.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Goodyear;
+  rdfs:tireHasType rdfs:Summer;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Radial;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeA;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeC.
+
+rdfs:WranglerDuratrac: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Wrangler Duratrac";
+  rdfs:comment "Tire of Goodyear.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Goodyear;
+  rdfs:tireHasType rdfs:All-season;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeE;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeF.
+
+rdfs:VentusV12evo2: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Ventus V12 evo2";
+  rdfs:comment "Tire of Hankook.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Hankook;
+  rdfs:tireHasType rdfs:Summer;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+rdfs:DynaproAT2: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Dynapro AT2";
+  rdfs:comment "Tire of Hankook.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Hankook;
+  rdfs:tireHasType rdfs:4x4;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Radial;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Directional;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+rdfs:PilotSport4S: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Pilot Sport 4S";
+  rdfs:comment "Tire of Michelin.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Michelin;
+  rdfs:tireHasType rdfs:Summer;
+  rdfs:tireHasLoudness rdfs:Noise72;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeA;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+rdfs:Primacy4: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Primacy 4";
+  rdfs:comment "Tire of Michelin.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Michelin;
+  rdfs:tireHasType rdfs:All-season;
+  rdfs:tireHasLoudness rdfs:Noise77;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeA.
+
+rdfs:PZero: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "P Zero";
+  rdfs:comment "Tire of Pirelli.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Pirelli;
+  rdfs:tireHasType rdfs:Summer;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeB;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+rdfs:CinturatoP7AllSeasonPlus: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Cinturato P7 All Season Plus";
+  rdfs:comment "Tire of Pirelli.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Pirelli;
+  rdfs:tireHasType rdfs:All-season;
+  rdfs:tireHasLoudness rdfs:Noise72;
+  rdfs:tireHasConstruction rdfs:Radial;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Symmetric;
+  rdfs:tireHasWetGrip rdfs:GradeA;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeA.
+
+rdfs:TigerPawTouringAS: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Tiger Paw Touring A/S";
+  rdfs:comment "Tire of Uniroyal.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Uniroyal;
+  rdfs:tireHasType rdfs:All-season;
+  rdfs:tireHasLoudness rdfs:Noise78;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Symmetric;
+  rdfs:tireHasWetGrip rdfs:GradeB;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+rdfs:AllSeasonExpert: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "All-Season Expert";
+  rdfs:comment "Tire of Uniroyal.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Uniroyal;
+  rdfs:tireHasType rdfs:All-season;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Symmetric;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+rdfs:AdvanSportV105: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Advan Sport V105";
+  rdfs:comment "Tire of Yokohama.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Yokohama;
+  rdfs:tireHasType rdfs:Summer;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeA;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeC.
+
+rdfs:GeolandarATG015: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Geolandar A/T G015";
+  rdfs:comment "Tire of Yokohama.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Yokohama;
+  rdfs:tireHasType rdfs:Run-flat;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+rdfs:gForceSportComp2: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "g-Force Sport Comp-2";
+  rdfs:comment "Tire of BFGoodrich.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:BFGoodrich;
+  rdfs:tireHasType rdfs:Summer;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeB;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+rdfs:TAKO2: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "T/A KO2";
+  rdfs:comment "Tire of BFGoodrich.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:BFGoodrich;
+  rdfs:tireHasType rdfs:4x4;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+rdfs:AL01: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "AL01";
+  rdfs:comment "Tire of Crossleader.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Crossleader;
+  rdfs:tireHasType rdfs:Summer;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Radial;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+rdfs:AL04: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "AL04";
+  rdfs:comment "Tire of Crossleader.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Crossleader;
+  rdfs:tireHasType rdfs:All-season;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Symmetrical;
+  rdfs:tireHasWetGrip rdfs:GradeB;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeC.
+
+rdfs:EcoControlHP: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "EcoControl HP";
+  rdfs:comment "Tire of Fulda.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Fulda;
+  rdfs:tireHasType rdfs:Summer;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+rdfs:KristallMontero3: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Kristall Montero 3";
+  rdfs:comment "Tire of Fulda.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Fulda;
+  rdfs:tireHasType rdfs:Winter;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Symmetrical;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+rdfs:X: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "";
+  rdfs:comment "Tire of Kelly.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Kelly;
+  rdfs:tireHasType rdfs:All-season;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Symmetrical;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+rdfs:SafariSignature: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Safari Signature";
+  rdfs:comment "Tire of Kelly.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Kelly;
+  rdfs:tireHasType rdfs:All-season;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Symmetrical;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+
+rdfs:EcstaPS91: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Ecsta PS91";
+  rdfs:comment "Tire of Kumho.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Kumho;
+  rdfs:tireHasType rdfs:Summer;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeF.
+
+rdfs:SolusTA31: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Solus TA31";
+  rdfs:comment "Tire of Kumho.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Kumho;
+  rdfs:tireHasType rdfs:All-season;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Symmetrical;
+  rdfs:tireHasWetGrip rdfs:GradeB;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+rdfs:MatracFXMU11: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Matrac FX MU11";
+  rdfs:comment "Tire of Marshal.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Marshal;
+  rdfs:tireHasType rdfs:Summer;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+rdfs:RoadVentureMTKL71: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Road Venture MT KL71";
+  rdfs:comment "Tire of Marshal.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Marshal;
+  rdfs:tireHasType rdfs:Run-flat;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeE;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeG.
+
+rdfs:NS-25: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "NS-25";
+  rdfs:comment "Tire of Nankang.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Nankang;
+  rdfs:tireHasType rdfs:All-season;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+rdfs:AS-1: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "AS-1";
+  rdfs:comment "Tire of Nankang.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Nankang;
+  rdfs:tireHasType rdfs:Summer;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeE;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeF.
+
+rdfs:HP: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "HP";
+  rdfs:comment "Tire of Orium.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Orium;
+  rdfs:tireHasType rdfs:Summer;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+rdfs:UHP: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "UHP";
+  rdfs:comment "Tire of Orium.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Orium;
+  rdfs:tireHasType rdfs:Summer;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Symmetrical;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+rdfs:SetulaERaceRH01: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Setula E-Race RH01";
+  rdfs:comment "Tire of Rotalla.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Rotalla;
+  rdfs:tireHasType rdfs:Summer;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeF.
+
+rdfs:RU01SPace: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "RU01 S-Pace";
+  rdfs:comment "Tire of Rotalla.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Rotalla;
+  rdfs:tireHasType rdfs:Summer;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeF.
+
+rdfs:ProxesSport: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Proxes Sport";
+  rdfs:comment "Tire of Toyo.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Toyo;
+  rdfs:tireHasType rdfs:Summer;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+rdfs:OpenCountryATII: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Open Country A/T II";
+  rdfs:comment "Tire of Toyo.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Toyo;
+  rdfs:tireHasType rdfs:4x4;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeE;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeE.
+
+rdfs:UltracVorti: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Ultrac Vorti";
+  rdfs:comment "Tire of Vredestein.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Vredestein;
+  rdfs:tireHasType rdfs:Summer;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Radial;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeC;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeF.
+
+rdfs:QuatracPro: a rdfs:Class;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#>;
+  rdfs:label "Quatrac Pro";
+  rdfs:comment "Tire of Vredestein.";
+  rdfs:subClassOf rdfs:BrandTire;
+  rdfs:tireHasBrand rdfs:Vredestein;
+  rdfs:tireHasType rdfs:Winter;
+  rdfs:tireHasLoudness rdfs:Noise74;
+  rdfs:tireHasConstruction rdfs:Solid;
+  rdfs:tireHasRim rdfs:Diameter18;
+  rdfs:tireHasWidth rdfs:Width235;  
+  rdfs:tireHasLoadIndex rdfs:LoadIndex100;
+  rdfs:tireHasSpeedIndex rdfs:V;
+  rdfs:tireHasPattern rdfs:Asymmetric;
+  rdfs:tireHasWetGrip rdfs:GradeB;
+  rdfs:tireHasGasConsumptionGrade rdfs:GradeC.

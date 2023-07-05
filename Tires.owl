@@ -1,0 +1,4235 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="https://raw.githubusercontent.com/edmcouncil/auto/master/VC/VehicleParts.rdf"/>
+    <owl:imports rdf:resource="https://raw.githubusercontent.com/edmcouncil/auto/master/VC/VehicleCore.rdf"/>
+    <owl:imports rdf:resource="https://raw.githubusercontent.com/EnvironmentOntology/gaz/master/src/ontology/gaz_countries.owl"/>
+    <rdfs:comment xml:lang="en">Ontology about everything related to Pneumatics</rdfs:comment>
+  </owl:Ontology>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/GAZ_00002650">
+  </owl:Class>
+  <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"></owl:Class>
+
+<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire">
+  <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire" />
+  <rdfs:label>PneumaticTire</rdfs:label>
+</owl:Class>
+
+  <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Car">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasTire"/>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasTire"/>
+        <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Bus">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasTire"/>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasTire"/>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">8</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasTire"/>
+        <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Motorcycle">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasTire"/>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasTire"/>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasTire"/>
+        <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/AgriculturalCommodityTrailer">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasTire"/>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasTire"/>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">16</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasTire"/>
+        <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+
+  <owl:ObjectProperty rdf:about="#HasNation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+    <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/gaz/gaz_countries.owl"/>
+    <rdfs:comment xml:lang="en">Nation of a Company</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="#HasTire">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+    <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:comment xml:lang="en">Number of tires for a vehicle</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="#Brand">
+    <rdfs:label xml:lang="en">Brand</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Avon">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand Avon</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Avon</rdfs:label>
+       <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GAZ_00002459"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#BFGoodrich">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand BFGoodrich</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>BFGoodrich</rdfs:label>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GAZ_00002940"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Bridgestone">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand Bridgestone</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Bridgestone</rdfs:label>
+     <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GAZ_00002747"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Continental">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand Continental</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Continental</rdfs:label>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GAZ_00002646"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Cooper">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand Cooper</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Cooper</rdfs:label>
+     <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GAZ_00002459"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Crossleader">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand Crossleader</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Crossleader</rdfs:label>
+     <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GAZ_00002459"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Dunlop">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand Dunlop</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Dunlop</rdfs:label>
+     <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GAZ_00002747"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Firestone">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand Firestone</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Firestone</rdfs:label>
+     <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GAZ_00002747"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Fulda">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand Fulda</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Fulda</rdfs:label>
+     <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GAZ_00002459"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Goodyear">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand Goodyear</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Goodyear</rdfs:label>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GAZ_00002459"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Hankook">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand Hankook</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Hankook</rdfs:label>
+     <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GAZ_00002802"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Kelly">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand Kelly</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Kelly</rdfs:label>
+     <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GAZ_00002459"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Kumho">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand Kumho</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Kumho</rdfs:label>
+     <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GAZ_00002802"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Marshal">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand Marshal</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Marshal</rdfs:label>
+     <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GAZ_00002802"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Michelin">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand Michelin</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Michelin</rdfs:label>
+     <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GAZ_00002940"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Nankang">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand Nankang</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Nankang</rdfs:label>
+     <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="ttp://purl.obolibrary.org/obo/GAZ_00005341"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Orium">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand Orium</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Orium</rdfs:label>
+     <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GAZ_00002940"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Pirelli">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand Pirelli</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Pirelli</rdfs:label>
+     <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GAZ_00002650"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Vittoria">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand Vittoria</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Vittoria</rdfs:label>
+     <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GAZ_00002650"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Toyo">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand Toyo</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Toyo</rdfs:label>
+     <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GAZ_00002747"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Uniroyal">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand Uniroyal</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Uniroyal</rdfs:label>
+     <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GAZ_00002646"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Vredestein">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand Vredestein</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Vredestein</rdfs:label>
+     <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GAZ_00002839"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Yokohama">
+    <rdfs:subClassOf rdf:resource="#Brand"/>
+    <rdfs:comment>Tires of brand Yokohama</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Yokohama</rdfs:label>
+     <rdfs:subClassOf>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#HasNation"/>
+          <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GAZ_00002747"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Type">
+    <rdfs:label xml:lang="en">Type</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Summer">
+    <rdfs:subClassOf rdf:resource="#Type"/>
+    <rdfs:comment>Tires for Summer season</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Summer</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Winter">
+    <rdfs:subClassOf rdf:resource="#Type"/>
+    <rdfs:comment>Tires for Winter Season</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Winter</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#All-season">
+    <rdfs:subClassOf rdf:resource="#Type"/>
+    <rdfs:comment>Tires for All-season</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>All-season</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Run-flat">
+    <rdfs:subClassOf rdf:resource="#Type"/>
+    <rdfs:comment>Tires of type Run-flat</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Run-flat</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#4x4">
+    <rdfs:subClassOf rdf:resource="#Type"/>
+    <rdfs:comment>4x4 Tires</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>4x4</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Pattern">
+    <rdfs:label xml:lang="en">Pattern</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Directional">
+    <rdfs:subClassOf rdf:resource="#Pattern"/>
+    <rdfs:comment>Directional</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Directional</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Symmetrical">
+    <rdfs:subClassOf rdf:resource="#Pattern"/>
+    <rdfs:comment>Symmetrical</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Symmetrical</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Asymmetric">
+    <rdfs:subClassOf rdf:resource="#Pattern"/>
+    <rdfs:comment>Asymmetric</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Asymmetric</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#SpeedIndex">
+    <rdfs:label xml:lang="en">Speed Index</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Q">
+    <rdfs:subClassOf rdf:resource="#SpeedIndex"/>
+    <rdfs:comment>Q.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Q</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#R">
+    <rdfs:subClassOf rdf:resource="#SpeedIndex"/>
+    <rdfs:comment>R.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>R</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#S">
+    <rdfs:subClassOf rdf:resource="#SpeedIndex"/>
+    <rdfs:comment>S.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>S</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#T">
+    <rdfs:subClassOf rdf:resource="#SpeedIndex"/>
+    <rdfs:comment>T.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>T</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#H">
+    <rdfs:subClassOf rdf:resource="#SpeedIndex"/>
+    <rdfs:comment>H.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>H</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#V">
+    <rdfs:subClassOf rdf:resource="#SpeedIndex"/>
+    <rdfs:comment>V.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>V</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#W">
+    <rdfs:subClassOf rdf:resource="#SpeedIndex"/>
+    <rdfs:comment>W.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>W</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Y">
+    <rdfs:subClassOf rdf:resource="#SpeedIndex"/>
+    <rdfs:comment>Y.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Y</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#ZR">
+    <rdfs:subClassOf rdf:resource="#SpeedIndex"/>
+    <rdfs:comment>ZR.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>ZR</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex">
+    <rdfs:label xml:lang="en">Load Index</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex65">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 65.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 65</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex66">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 66.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 66</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex67">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 67.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 67</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex68">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 68.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 68</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex69">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 69.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 69</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex70">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 70.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 70</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex71">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 71.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 71</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex72">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 72.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 72</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex73">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 73.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 73</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex74">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 74.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 74</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex75">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 75.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 75</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex76">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 76.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 76</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex77">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 77.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 77</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex78">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 78.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 78</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex79">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 79.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 79</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex80">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 80.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 80</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex81">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 81.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 81</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex82">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 82.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 82</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex83">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 83.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 83</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex84">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 84.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 84</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex85">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 85.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 85</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex86">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 86.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 86</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex87">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 87.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 87</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex88">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 88.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 88</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex89">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 89.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 89</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex90">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 90.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 90</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex91">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 91.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 91</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex92">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 92.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 92</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex93">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 93.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 93</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex94">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 94.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 94</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex95">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 95.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 95</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex96">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 96.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 96</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex97">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 97.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 97</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex98">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 98.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 98</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex99">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 99.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 99</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#LoadIndex100">
+    <rdfs:subClassOf rdf:resource="#LoadIndex"/>
+    <rdfs:comment>Load Index 100.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Load Index 100</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width">
+    <rdfs:label xml:lang="en">Width</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width125">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <rdfs:comment>Width 125.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Width 125</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width135">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <rdfs:comment>Width 135.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Width 135</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width145">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <rdfs:comment>Width 145.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Width 145</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width155">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <rdfs:comment>Width 155.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Width 155</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width165">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <rdfs:comment>Width 165.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Width 165</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width175">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <rdfs:comment>Width 175.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Width 175</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width185">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <rdfs:comment>Width 185.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Width 185</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width195">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <rdfs:comment>Width 195.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Width 195</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width205">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <rdfs:comment>Width 205.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Width 205</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width215">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <rdfs:comment>Width 215.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Width 215</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width225">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <rdfs:comment>Width 225.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Width 225</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width235">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <rdfs:comment>Width 235.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Width 235</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width245">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <rdfs:comment>Width 245.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Width 245</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width255">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <rdfs:comment>Width 255.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Width 255</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width265">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <rdfs:comment>Width 265.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Width 265</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width275">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <rdfs:comment>Width 275.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Width 275</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width285">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <rdfs:comment>Width 285.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Width 285</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width295">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <rdfs:comment>Width 295.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Width 295</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width305">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <rdfs:comment>Width 305.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Width 305</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width315">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <rdfs:comment>Width 315.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Width 315</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width325">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <rdfs:comment>Width 325.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Width 325</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Width335">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <rdfs:comment>Width 335.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Width 335</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#AllWidth">
+    <rdfs:subClassOf rdf:resource="#Width"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf>
+          <rdf:Description>
+            <rdf:first>
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="#HasWidth"/>
+                <owl:someValuesFrom rdf:resource="#Width125"/>
+              </owl:Restriction>
+            </rdf:first>
+
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first>
+                  <owl:Restriction>
+                    <owl:onProperty rdf:resource="#HasWidth"/>
+                    <owl:someValuesFrom rdf:resource="#Width135"/>
+                  </owl:Restriction>
+                </rdf:first>
+
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first>
+                      <owl:Restriction>
+                        <owl:onProperty rdf:resource="#HasWidth"/>
+                        <owl:someValuesFrom rdf:resource="#Width145"/>
+                      </owl:Restriction>
+                    </rdf:first>
+
+                    <rdf:rest>
+                      <rdf:Description>
+                        <rdf:first>
+                          <owl:Restriction>
+                            <owl:onProperty rdf:resource="#HasWidth"/>
+                            <owl:someValuesFrom rdf:resource="#Width155"/>
+                          </owl:Restriction>
+                        </rdf:first>
+
+                        <rdf:rest>
+                          <rdf:Description>
+                            <rdf:first>
+                              <owl:Restriction>
+                                <owl:onProperty rdf:resource="#HasWidth"/>
+                                <owl:someValuesFrom rdf:resource="#Width165"/>
+                              </owl:Restriction>
+                            </rdf:first>
+
+                            <rdf:rest>
+                              <rdf:Description>
+                                <rdf:first>
+                                  <owl:Restriction>
+                                    <owl:onProperty rdf:resource="#HasWidth"/>
+                                    <owl:someValuesFrom rdf:resource="#Width175"/>
+                                  </owl:Restriction>
+                                </rdf:first>
+
+                                <rdf:rest>
+                                  <rdf:Description>
+                                    <rdf:first>
+                                      <owl:Restriction>
+                                        <owl:onProperty rdf:resource="#HasWidth"/>
+                                        <owl:someValuesFrom rdf:resource="#Width185"/>
+                                      </owl:Restriction>
+                                    </rdf:first>
+
+                                    <rdf:rest>
+                                      <rdf:Description>
+                                        <rdf:first>
+                                          <owl:Restriction>
+                                            <owl:onProperty rdf:resource="#HasWidth"/>
+                                            <owl:someValuesFrom rdf:resource="#Width195"/>
+                                          </owl:Restriction>
+                                        </rdf:first>
+
+                                        <rdf:rest>
+                                          <rdf:Description>
+                                            <rdf:first>
+                                              <owl:Restriction>
+                                                <owl:onProperty rdf:resource="#HasWidth"/>
+                                                <owl:someValuesFrom rdf:resource="#Width205"/>
+                                              </owl:Restriction>
+                                            </rdf:first>
+
+                                            <rdf:rest>
+                                              <rdf:Description>
+                                                <rdf:first>
+                                                  <owl:Restriction>
+                                                    <owl:onProperty rdf:resource="#HasWidth"/>
+                                                    <owl:someValuesFrom rdf:resource="#Width215"/>
+                                                  </owl:Restriction>
+                                                </rdf:first>
+
+                                                <rdf:rest>
+                                                  <rdf:Description>
+                                                    <rdf:first>
+                                                      <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="#HasWidth"/>
+                                                        <owl:someValuesFrom rdf:resource="#Width225"/>
+                                                      </owl:Restriction>
+                                                    </rdf:first>
+
+                                                    <rdf:rest>
+                                                      <rdf:Description>
+                                                        <rdf:first>
+                                                          <owl:Restriction>
+                                                            <owl:onProperty rdf:resource="#HasWidth"/>
+                                                            <owl:someValuesFrom rdf:resource="#Width235"/>
+                                                          </owl:Restriction>
+                                                        </rdf:first>
+
+                                                        <rdf:rest>
+                                                          <rdf:Description>
+                                                            <rdf:first>
+                                                              <owl:Restriction>
+                                                                <owl:onProperty rdf:resource="#HasWidth"/>
+                                                                <owl:someValuesFrom rdf:resource="#Width245"/>
+                                                              </owl:Restriction>
+                                                            </rdf:first>
+
+                                                            <rdf:rest>
+                                                              <rdf:Description>
+                                                                <rdf:first>
+                                                                  <owl:Restriction>
+                                                                    <owl:onProperty rdf:resource="#HasWidth"/>
+                                                                    <owl:someValuesFrom rdf:resource="#Width255"/>
+                                                                  </owl:Restriction>
+                                                                </rdf:first>
+
+                                                                <rdf:rest>
+                                                                  <rdf:Description>
+                                                                    <rdf:first>
+                                                                      <owl:Restriction>
+                                                                        <owl:onProperty rdf:resource="#HasWidth"/>
+                                                                        <owl:someValuesFrom rdf:resource="#Width265"/>
+                                                                      </owl:Restriction>
+                                                                    </rdf:first>
+
+                                                                    <rdf:rest>
+                                                                      <rdf:Description>
+                                                                        <rdf:first>
+                                                                          <owl:Restriction>
+                                                                            <owl:onProperty rdf:resource="#HasWidth"/>
+                                                                            <owl:someValuesFrom rdf:resource="#Width275"/>
+                                                                          </owl:Restriction>
+                                                                        </rdf:first>
+
+                                                                        <rdf:rest>
+                                                                          <rdf:Description>
+                                                                            <rdf:first>
+                                                                              <owl:Restriction>
+                                                                                <owl:onProperty rdf:resource="#HasWidth"/>
+                                                                                <owl:someValuesFrom rdf:resource="#Width285"/>
+                                                                              </owl:Restriction>
+                                                                            </rdf:first>
+
+                                                                            <rdf:rest>
+                                                                              <rdf:Description>
+                                                                                <rdf:first>
+                                                                                  <owl:Restriction>
+                                                                                    <owl:onProperty rdf:resource="#HasWidth"/>
+                                                                                    <owl:someValuesFrom rdf:resource="#Width295"/>
+                                                                                  </owl:Restriction>
+                                                                                </rdf:first>
+
+                                                                                <rdf:rest>
+                                                                                  <rdf:Description>
+                                                                                    <rdf:first>
+                                                                                      <owl:Restriction>
+                                                                                        <owl:onProperty rdf:resource="#HasWidth"/>
+                                                                                        <owl:someValuesFrom rdf:resource="#Width305"/>
+                                                                                      </owl:Restriction>
+                                                                                    </rdf:first>
+
+                                                                                    <rdf:rest>
+                                                                                      <rdf:Description>
+                                                                                        <rdf:first>
+                                                                                          <owl:Restriction>
+                                                                                            <owl:onProperty rdf:resource="#HasWidth"/>
+                                                                                            <owl:someValuesFrom rdf:resource="#Width315"/>
+                                                                                          </owl:Restriction>
+                                                                                        </rdf:first>
+
+                                                                                        <rdf:rest>
+                                                                                          <rdf:Description>
+                                                                                            <rdf:first>
+                                                                                              <owl:Restriction>
+                                                                                                <owl:onProperty rdf:resource="#HasWidth"/>
+                                                                                                <owl:someValuesFrom rdf:resource="#Width325"/>
+                                                                                              </owl:Restriction>
+                                                                                            </rdf:first>
+
+                                                                                            <rdf:rest>
+                                                                                              <rdf:Description>
+                                                                                                <rdf:first>
+                                                                                                  <owl:Restriction>
+                                                                                                    <owl:onProperty rdf:resource="#HasWidth"/>
+                                                                                                    <owl:someValuesFrom rdf:resource="#Width335"/>
+                                                                                                  </owl:Restriction>
+                                                                                                </rdf:first>
+
+                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                              </rdf:Description>
+                                                                                            </rdf:rest>
+
+                                                                                          </rdf:Description>
+                                                                                        </rdf:rest>
+
+                                                                                      </rdf:Description>
+                                                                                    </rdf:rest>
+
+                                                                                  </rdf:Description>
+                                                                                </rdf:rest>
+
+                                                                              </rdf:Description>
+                                                                            </rdf:rest>
+
+                                                                          </rdf:Description>
+                                                                        </rdf:rest>
+
+                                                                      </rdf:Description>
+                                                                    </rdf:rest>
+
+                                                                  </rdf:Description>
+                                                                </rdf:rest>
+
+                                                              </rdf:Description>
+                                                            </rdf:rest>
+
+                                                          </rdf:Description>
+                                                        </rdf:rest>
+
+                                                      </rdf:Description>
+                                                    </rdf:rest>
+
+                                                  </rdf:Description>
+                                                </rdf:rest>
+
+                                              </rdf:Description>
+                                            </rdf:rest>
+
+                                          </rdf:Description>
+                                        </rdf:rest>
+
+                                      </rdf:Description>
+                                    </rdf:rest>
+
+                                  </rdf:Description>
+                                </rdf:rest>
+
+                              </rdf:Description>
+                            </rdf:rest>
+
+                          </rdf:Description>
+                        </rdf:rest>
+
+                      </rdf:Description>
+                    </rdf:rest>
+
+                  </rdf:Description>
+                </rdf:rest>
+
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:intersectionOf>
+
+      </owl:Class>
+    </owl:equivalentClass>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#RimDiameter">
+    <rdfs:label xml:lang="en">Rim Diameter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Diameter13">
+    <rdfs:subClassOf rdf:resource="#RimDiameter"/>
+    <rdfs:comment>Diameter 13.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Diameter 13</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Diameter14">
+    <rdfs:subClassOf rdf:resource="#RimDiameter"/>
+    <rdfs:comment>Diameter 14.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Diameter 14</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Diameter15">
+    <rdfs:subClassOf rdf:resource="#RimDiameter"/>
+    <rdfs:comment>Diameter 15.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Diameter 15</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Diameter16">
+    <rdfs:subClassOf rdf:resource="#RimDiameter"/>
+    <rdfs:comment>Diameter 16.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Diameter 16</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Diameter17">
+    <rdfs:subClassOf rdf:resource="#RimDiameter"/>
+    <rdfs:comment>Diameter 17.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Diameter 17</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Diameter18">
+    <rdfs:subClassOf rdf:resource="#RimDiameter"/>
+    <rdfs:comment>Diameter 18.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Diameter 18</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Diameter19">
+    <rdfs:subClassOf rdf:resource="#RimDiameter"/>
+    <rdfs:comment>Diameter 19.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Diameter 19</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Diameter20">
+    <rdfs:subClassOf rdf:resource="#RimDiameter"/>
+    <rdfs:comment>Diameter 20.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Diameter 20</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Diameter21">
+    <rdfs:subClassOf rdf:resource="#RimDiameter"/>
+    <rdfs:comment>Diameter 21.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Diameter 21</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Diameter22">
+    <rdfs:subClassOf rdf:resource="#RimDiameter"/>
+    <rdfs:comment>Diameter 22.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Diameter 22</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Diameter23">
+    <rdfs:subClassOf rdf:resource="#RimDiameter"/>
+    <rdfs:comment>Diameter 23.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Diameter 23</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Diameter24">
+    <rdfs:subClassOf rdf:resource="#RimDiameter"/>
+    <rdfs:comment>Diameter 24.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Diameter 24</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Diameter25">
+    <rdfs:subClassOf rdf:resource="#RimDiameter"/>
+    <rdfs:comment>Diameter 25.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Diameter 25</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Diameter26">
+    <rdfs:subClassOf rdf:resource="#RimDiameter"/>
+    <rdfs:comment>Diameter 26.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Diameter 26</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Diameter27">
+    <rdfs:subClassOf rdf:resource="#RimDiameter"/>
+    <rdfs:comment>Diameter 27.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Diameter 27</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Diameter28">
+    <rdfs:subClassOf rdf:resource="#RimDiameter"/>
+    <rdfs:comment>Diameter 28.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Diameter 28</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Diameter29">
+    <rdfs:subClassOf rdf:resource="#RimDiameter"/>
+    <rdfs:comment>Diameter 29.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Diameter 29</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Diameter30">
+    <rdfs:subClassOf rdf:resource="#RimDiameter"/>
+    <rdfs:comment>Diameter 30.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Diameter 30</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#AllDiameter">
+    <rdfs:subClassOf rdf:resource="#RimDiameter"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf>
+          <rdf:Description>
+            <rdf:first>
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="#HasRim"/>
+                <owl:someValuesFrom rdf:resource="#Diameter13"/>
+              </owl:Restriction>
+            </rdf:first>
+
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first>
+                  <owl:Restriction>
+                    <owl:onProperty rdf:resource="#HasRim"/>
+                    <owl:someValuesFrom rdf:resource="#Diameter14"/>
+                  </owl:Restriction>
+                </rdf:first>
+
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first>
+                      <owl:Restriction>
+                        <owl:onProperty rdf:resource="#HasRim"/>
+                        <owl:someValuesFrom rdf:resource="#Diameter15"/>
+                      </owl:Restriction>
+                    </rdf:first>
+
+                    <rdf:rest>
+                      <rdf:Description>
+                        <rdf:first>
+                          <owl:Restriction>
+                            <owl:onProperty rdf:resource="#HasRim"/>
+                            <owl:someValuesFrom rdf:resource="#Diameter16"/>
+                          </owl:Restriction>
+                        </rdf:first>
+
+                        <rdf:rest>
+                          <rdf:Description>
+                            <rdf:first>
+                              <owl:Restriction>
+                                <owl:onProperty rdf:resource="#HasRim"/>
+                                <owl:someValuesFrom rdf:resource="#Diameter17"/>
+                              </owl:Restriction>
+                            </rdf:first>
+
+                            <rdf:rest>
+                              <rdf:Description>
+                                <rdf:first>
+                                  <owl:Restriction>
+                                    <owl:onProperty rdf:resource="#HasRim"/>
+                                    <owl:someValuesFrom rdf:resource="#Diameter18"/>
+                                  </owl:Restriction>
+                                </rdf:first>
+
+                                <rdf:rest>
+                                  <rdf:Description>
+                                    <rdf:first>
+                                      <owl:Restriction>
+                                        <owl:onProperty rdf:resource="#HasRim"/>
+                                        <owl:someValuesFrom rdf:resource="#Diameter19"/>
+                                      </owl:Restriction>
+                                    </rdf:first>
+
+                                    <rdf:rest>
+                                      <rdf:Description>
+                                        <rdf:first>
+                                          <owl:Restriction>
+                                            <owl:onProperty rdf:resource="#HasRim"/>
+                                            <owl:someValuesFrom rdf:resource="#Diameter20"/>
+                                          </owl:Restriction>
+                                        </rdf:first>
+
+                                        <rdf:rest>
+                                          <rdf:Description>
+                                            <rdf:first>
+                                              <owl:Restriction>
+                                                <owl:onProperty rdf:resource="#HasRim"/>
+                                                <owl:someValuesFrom rdf:resource="#Diameter21"/>
+                                              </owl:Restriction>
+                                            </rdf:first>
+
+                                            <rdf:rest>
+                                              <rdf:Description>
+                                                <rdf:first>
+                                                  <owl:Restriction>
+                                                    <owl:onProperty rdf:resource="#HasRim"/>
+                                                    <owl:someValuesFrom rdf:resource="#Diameter22"/>
+                                                  </owl:Restriction>
+                                                </rdf:first>
+
+                                                <rdf:rest>
+                                                  <rdf:Description>
+                                                    <rdf:first>
+                                                      <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="#HasRim"/>
+                                                        <owl:someValuesFrom rdf:resource="#Diameter23"/>
+                                                      </owl:Restriction>
+                                                    </rdf:first>
+
+                                                    <rdf:rest>
+                                                      <rdf:Description>
+                                                        <rdf:first>
+                                                          <owl:Restriction>
+                                                            <owl:onProperty rdf:resource="#HasRim"/>
+                                                            <owl:someValuesFrom rdf:resource="#Diameter24"/>
+                                                          </owl:Restriction>
+                                                        </rdf:first>
+
+                                                        <rdf:rest>
+                                                          <rdf:Description>
+                                                            <rdf:first>
+                                                              <owl:Restriction>
+                                                                <owl:onProperty rdf:resource="#HasRim"/>
+                                                                <owl:someValuesFrom rdf:resource="#Diameter25"/>
+                                                              </owl:Restriction>
+                                                            </rdf:first>
+
+                                                            <rdf:rest>
+                                                              <rdf:Description>
+                                                                <rdf:first>
+                                                                  <owl:Restriction>
+                                                                    <owl:onProperty rdf:resource="#HasRim"/>
+                                                                    <owl:someValuesFrom rdf:resource="#Diameter26"/>
+                                                                  </owl:Restriction>
+                                                                </rdf:first>
+
+                                                                <rdf:rest>
+                                                                  <rdf:Description>
+                                                                    <rdf:first>
+                                                                      <owl:Restriction>
+                                                                        <owl:onProperty rdf:resource="#HasRim"/>
+                                                                        <owl:someValuesFrom rdf:resource="#Diameter27"/>
+                                                                      </owl:Restriction>
+                                                                    </rdf:first>
+
+                                                                    <rdf:rest>
+                                                                      <rdf:Description>
+                                                                        <rdf:first>
+                                                                          <owl:Restriction>
+                                                                            <owl:onProperty rdf:resource="#HasRim"/>
+                                                                            <owl:someValuesFrom rdf:resource="#Diameter28"/>
+                                                                          </owl:Restriction>
+                                                                        </rdf:first>
+
+                                                                        <rdf:rest>
+                                                                          <rdf:Description>
+                                                                            <rdf:first>
+                                                                              <owl:Restriction>
+                                                                                <owl:onProperty rdf:resource="#HasRim"/>
+                                                                                <owl:someValuesFrom rdf:resource="#Diameter29"/>
+                                                                              </owl:Restriction>
+                                                                            </rdf:first>
+
+                                                                            <rdf:rest>
+                                                                              <rdf:Description>
+                                                                                <rdf:first>
+                                                                                  <owl:Restriction>
+                                                                                    <owl:onProperty rdf:resource="#HasRim"/>
+                                                                                    <owl:someValuesFrom rdf:resource="#Diameter30"/>
+                                                                                  </owl:Restriction>
+                                                                                </rdf:first>
+
+                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                              </rdf:Description>
+                                                                            </rdf:rest>
+
+                                                                          </rdf:Description>
+                                                                        </rdf:rest>
+
+                                                                      </rdf:Description>
+                                                                    </rdf:rest>
+
+                                                                  </rdf:Description>
+                                                                </rdf:rest>
+
+                                                              </rdf:Description>
+                                                            </rdf:rest>
+
+                                                          </rdf:Description>
+                                                        </rdf:rest>
+
+                                                      </rdf:Description>
+                                                    </rdf:rest>
+
+                                                  </rdf:Description>
+                                                </rdf:rest>
+
+                                              </rdf:Description>
+                                            </rdf:rest>
+
+                                          </rdf:Description>
+                                        </rdf:rest>
+
+                                      </rdf:Description>
+                                    </rdf:rest>
+
+                                  </rdf:Description>
+                                </rdf:rest>
+
+                              </rdf:Description>
+                            </rdf:rest>
+
+                          </rdf:Description>
+                        </rdf:rest>
+
+                      </rdf:Description>
+                    </rdf:rest>
+
+                  </rdf:Description>
+                </rdf:rest>
+
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:intersectionOf>
+
+      </owl:Class>
+    </owl:equivalentClass>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#Construction">
+    <rdfs:label xml:lang="en">Construction</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Radial">
+    <rdfs:subClassOf rdf:resource="#Construction"/>
+    <rdfs:comment>Radial.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Radial</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Bias">
+    <rdfs:subClassOf rdf:resource="#Construction"/>
+    <rdfs:comment>Bias.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Bias</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Solid">
+    <rdfs:subClassOf rdf:resource="#Construction"/>
+    <rdfs:comment>Solid.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Solid</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Loudness">
+    <rdfs:label xml:lang="en">Loudness</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Noise67">
+    <rdfs:subClassOf rdf:resource="#Loudness"/>
+    <rdfs:comment>Noise of 67 dB.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Noise 67</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Noise68">
+    <rdfs:subClassOf rdf:resource="#Loudness"/>
+    <rdfs:comment>Noise of 68 dB.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Noise 68</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Noise69">
+    <rdfs:subClassOf rdf:resource="#Loudness"/>
+    <rdfs:comment>Noise of 69 dB.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Noise 69</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Noise70">
+    <rdfs:subClassOf rdf:resource="#Loudness"/>
+    <rdfs:comment>Noise of 70 dB.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Noise 70</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Noise71">
+    <rdfs:subClassOf rdf:resource="#Loudness"/>
+    <rdfs:comment>Noise of 71 dB.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Noise 71</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Noise72">
+    <rdfs:subClassOf rdf:resource="#Loudness"/>
+    <rdfs:comment>Noise of 72 dB.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Noise 72</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Noise73">
+    <rdfs:subClassOf rdf:resource="#Loudness"/>
+    <rdfs:comment>Noise of 73 dB.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Noise 73</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Noise74">
+    <rdfs:subClassOf rdf:resource="#Loudness"/>
+    <rdfs:comment>Noise of 74 dB.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Noise 74</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Noise75">
+    <rdfs:subClassOf rdf:resource="#Loudness"/>
+    <rdfs:comment>Noise of 75 dB.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Noise 75</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Noise76">
+    <rdfs:subClassOf rdf:resource="#Loudness"/>
+    <rdfs:comment>Noise of 76 dB.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Noise 76</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#Noise77">
+    <rdfs:subClassOf rdf:resource="#Loudness"/>
+    <rdfs:comment>Noise of 77 dB.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Noise 77</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#WetGrip">
+    <rdfs:label xml:lang="en">Wet Grip</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#GasConsumptionGrade">
+    <rdfs:label xml:lang="en">Gas Consumption Grade</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#GradeA">
+    <rdfs:subClassOf rdf:resource="#WetGrip"/>
+    <rdfs:subClassOf rdf:resource="#GasConsumptionGrade"/>
+    <rdfs:comment>GradeA</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Grade A</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#GradeB">
+    <rdfs:subClassOf rdf:resource="#WetGrip"/>
+    <rdfs:subClassOf rdf:resource="#GasConsumptionGrade"/>
+    <rdfs:comment>GradeB</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Grade B</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#GradeC">
+    <rdfs:subClassOf rdf:resource="#WetGrip"/>
+    <rdfs:subClassOf rdf:resource="#GasConsumptionGrade"/>
+    <rdfs:comment>GradeC</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Grade C</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#GradeD">
+    <rdfs:subClassOf rdf:resource="#WetGrip"/>
+    <rdfs:subClassOf rdf:resource="#GasConsumptionGrade"/>
+    <rdfs:comment>GradeD</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Grade D</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#GradeE">
+    <rdfs:subClassOf rdf:resource="#WetGrip"/>
+    <rdfs:subClassOf rdf:resource="#GasConsumptionGrade"/>
+    <rdfs:comment>GradeE</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Grade E</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#GradeF">
+    <rdfs:subClassOf rdf:resource="#WetGrip"/>
+    <rdfs:subClassOf rdf:resource="#GasConsumptionGrade"/>
+    <rdfs:comment>GradeF</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Grade F</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="#GradeG">
+    <rdfs:subClassOf rdf:resource="#WetGrip"/>
+    <rdfs:subClassOf rdf:resource="#GasConsumptionGrade"/>
+    <rdfs:comment>GradeG</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource=""/>
+    <rdfs:label>Grade G</rdfs:label>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="#HasConstruction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+    <rdfs:range rdf:resource="#Construction"/>
+    <rdfs:comment xml:lang="en">___</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="#HasRim">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+    <rdfs:range rdf:resource="#RimDiameter"/>
+    <rdfs:comment xml:lang="en">___</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="#HasWidth">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+    <rdfs:range rdf:resource="#Width"/>
+    <rdfs:comment xml:lang="en">___</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="#HasBrand">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+    <rdfs:range rdf:resource="#Brand"/>
+    <rdfs:comment xml:lang="en">___</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="#HasType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+    <rdfs:range rdf:resource="#Type"/>
+    <rdfs:comment xml:lang="en">___</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="#HasLoadIndex">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+    <rdfs:range rdf:resource="#LoadIndex"/>
+    <rdfs:comment xml:lang="en">___</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="#HasSpeedIndex">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+    <rdfs:range rdf:resource="#SpeedIndex"/>
+    <rdfs:comment xml:lang="en">___</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="#HasPattern">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+    <rdfs:range rdf:resource="#Pattern"/>
+    <rdfs:comment xml:lang="en">___</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="#HasWetGrip">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+    <rdfs:range rdf:resource="#WetGrip"/>
+    <rdfs:comment xml:lang="en">___</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="#HasLoudness">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+    <rdfs:range rdf:resource="#Loudness"/>
+    <rdfs:comment xml:lang="en">___</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="#HasGasConsumptionGrade">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Tire"/>
+    <rdfs:range rdf:resource="#GasConsumptionGrade"/>
+    <rdfs:comment xml:lang="en">___</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="#AS7">
+    <rdfs:label xml:lang="en">Avon AS7</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Avon"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#Summer"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise70"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Solid"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex100"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#V"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Asymmetric"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeB"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeB"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#AX7">
+    <rdfs:label xml:lang="en">Avon AX7</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Bridgestone"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#All-season"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise70"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Solid"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex100"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#V"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Asymmetric"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeB"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeB"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#ZV7">
+    <rdfs:label xml:lang="en">Avon ZV7</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Bridgestone"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#All-season"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise70"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Solid"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex80"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#V"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Asymmetric"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeA"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#AV12">
+    <rdfs:label xml:lang="en">Avon AV12</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Bridgestone"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#All-season"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise75"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Solid"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex98"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#V"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Asymmetric"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeD"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#TURANZA_6">
+    <rdfs:label xml:lang="en">Bridgestone Tire TURANZA 6</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Bridgestone"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#4x4"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise72"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex80"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#W"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Symmetrical"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeA"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeA"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#TURANZA_T005_DriveGuard">
+    <rdfs:label xml:lang="en">Bridgestone TURANZA_T005	</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Bridgestone"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#Summer"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise74"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#Y"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Symmetrical"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeB"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#TURANZA_ER300A">
+    <rdfs:label xml:lang="en">Bridgestone TURANZA_ER300A</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Bridgestone"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#Summer"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise74"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#Y"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Symmetrical"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeB"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#ContiSportContact5">
+    <rdfs:label xml:lang="en">ContiSportContact5</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Continental"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#Summer"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise73"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#Y"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Asymmetric"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeA"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#ExtremeContactDWS06">
+    <rdfs:label xml:lang="en">ExtremeContact DWS06</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Continental"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#All-season"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise70"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#V"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Asymmetric"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeA"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#DiscovererA/T3">
+    <rdfs:label xml:lang="en">Discoverer A/T3</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Cooper"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#4x4"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise74"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#Y"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Asymmetric"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeE"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#SPSportMaxxGT">
+    <rdfs:label xml:lang="en">SP Sport Maxx GT</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Cooper"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#Winter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise76"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#V"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Asymmetric"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeE"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeF"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Dunlop"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#All-season"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise72"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#W"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Asymmetric"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeA"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeB"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#WinterSport5">
+    <rdfs:label xml:lang="en">Winter Sport 5</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Dunlop"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#Winter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise76"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#V"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Asymmetric"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeB"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#EagleF1Asymmetric3">
+    <rdfs:label xml:lang="en">Eagle F1 Asymmetric 3</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Goodyear"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#All-season"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise71"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#Y"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Asymmetric"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeA"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#WranglerAll-TerrainAdventure">
+    <rdfs:label xml:lang="en">Wrangler All-Terrain Adventure</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Goodyear"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#4x4"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise72"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#S"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Asymmetric"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeB"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeD"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#EfficientGripPerformance">
+    <rdfs:label xml:lang="en">EfficientGrip Performance</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Goodyear"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#Summer"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise68"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#W"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Asymmetric"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeA"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#PilotSport4">
+    <rdfs:label xml:lang="en">Pilot Sport 4</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Michelin"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#All-season"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise72"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#Y"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Asymmetric"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeA"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeB"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#LatitudeTourHP">
+    <rdfs:label xml:lang="en">Latitude Tour HP</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Michelin"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#4x4"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise72"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#W"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Asymmetric"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeA"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#Primacy4">
+    <rdfs:label xml:lang="en">Primacy 4</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Michelin"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#Summer"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise70"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#V"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Asymmetric"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeA"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeB"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#EcstaPS31">
+    <rdfs:label xml:lang="en">Ecsta PS31</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Kumho"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#Summer"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise70"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#T"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Asymmetric"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeA"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#CrugenPremiumKL33">
+    <rdfs:label xml:lang="en">Crugen Premium KL33</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Kumho"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#4x4"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise74"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#Y"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Asymmetric"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeB"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeD"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#RoadVentureAT51">
+    <rdfs:label xml:lang="en">Road Venture AT51	</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Kumho"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#4x4"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise76"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#H"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Asymmetric"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeE"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#ProxesT1Sport">
+    <rdfs:label xml:lang="en">Proxes T1 Sport</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Toyo"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#Summer"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise70"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#Q"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Asymmetric"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeB"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeD"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#CelsiusCUV">
+    <rdfs:label xml:lang="en">Celsius CUV</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Toyo"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#All-season"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise71"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#V"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Directional"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeD"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeF"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#OpenCountryM/T">
+    <rdfs:label xml:lang="en">Open Country M/T</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Toyo"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#4x4"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise75"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#Y"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Symmetrical"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeA"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeB"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#UltracVorti">
+    <rdfs:label xml:lang="en">Ultrac Vorti</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Vredestein"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#All-season"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise70"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#Y"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Asymmetric"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeB"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="#QuatracPro">
+    <rdfs:label xml:lang="en">Quatrac Pro</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Vredestein"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#Winter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise72"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#Y"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Directional"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+ <owl:Class rdf:about="#Powergy">
+    <rdfs:label xml:lang="en">Powergy</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Pirelli"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#Summer"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise70"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#Y"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Directional"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeA"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeB"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+ <owl:Class rdf:about="#CinturatiìoP7">
+    <rdfs:label xml:lang="en">Cinturatiìo P7</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/PneumaticTire"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasBrand"/>
+        <owl:someValuesFrom rdf:resource="#Pirelli"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasType"/>
+        <owl:someValuesFrom rdf:resource="#Summer"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoudness"/>
+        <owl:someValuesFrom rdf:resource="#Noise68"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasConstruction"/>
+        <owl:someValuesFrom rdf:resource="#Bias"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasRim"/>
+        <owl:someValuesFrom rdf:resource="#AllDiameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWidth"/>
+        <owl:allValuesFrom rdf:resource="#AllWidth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasLoadIndex"/>
+        <owl:someValuesFrom rdf:resource="#LoadIndex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasSpeedIndex"/>
+        <owl:someValuesFrom rdf:resource="#Y"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasPattern"/>
+        <owl:someValuesFrom rdf:resource="#Directional"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasWetGrip"/>
+        <owl:someValuesFrom rdf:resource="#GradeA"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#HasGasConsumptionGrade"/>
+        <owl:someValuesFrom rdf:resource="#GradeC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+
+</rdf:RDF>
